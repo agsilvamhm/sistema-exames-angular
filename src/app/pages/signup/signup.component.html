@@ -6,36 +6,38 @@
           <img src="../../../assets/add-friend.png" width="100" height="100">
         </div>
         <h1 class="text-center">Registrar aqui</h1>
-        <form action="">
+
+        <form (ngSubmit) = "formSubmit()">
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Usuário: </mat-label>
-            <input matInput placeholder="Digite seu username">
+            <input [(ngModel)] = "user.username" name = "username" placeholder="Usuário">
            </mat-form-field>
 
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Password: </mat-label>
-            <input type = "password" matInput placeholder="Digite o seu password">
+            <input [(ngModel)] = "user.password" name = "password"  placeholder="Senha">
            </mat-form-field>
 
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Nome: </mat-label>
-            <input matInput placeholder="Digite seu nome">
+            <input [(ngModel)] = "user.nome" name = "nome"  placeholder="Nome">
            </mat-form-field>
 
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Sobrenome: </mat-label>
-            <input matInput placeholder="Digite seu sobrenome">
+            <input [(ngModel)] = "user.sobrenome" name = "sobrenome"  placeholder="Sobrenome">
            </mat-form-field>
 
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email: </mat-label>
-            <input type="email" matInput placeholder="Digite seu email">
+            <input [(ngModel)] = "user.email" name = "email" placeholder="E-mail">
            </mat-form-field>
 
            <mat-form-field class="full-width" appearance="outline">
             <mat-label>Telefone: </mat-label>
-            <input matInput placeholder="Digite seu telefone">
+            <input [(ngModel)] = "user.telefone" name = "telefone" placeholder="Telefone">
            </mat-form-field>
+
            <div class="container text-center">
             <button mat-raised-button color="primary">Registrar</button>
             <button style = "margin-left: 20 px" mat-raised-button color="accent">Limpar</button>

@@ -29,6 +29,15 @@ export class SignupComponent implements OnInit{
       alert ('O login do usuário é requerido');
       return;
     }
+
+    this.userService.salvarUsuario(this.user).subscribe((data) => {
+      console.log(data);
+      alert('Usuário salvo com éxito');
+    }, (error => {
+      console.log(error);
+      alert('Ocorreu um erro no sistema!');
+    })
+    )
   }
 
 }

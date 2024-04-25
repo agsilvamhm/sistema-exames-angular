@@ -10,6 +10,6 @@ export class UserService {
   constructor(private httpCliente: HttpClient) { }
 
   public salvarUsuario(user: any){
-    return this.httpCliente.post(`${baserUrl}/usuarios`, user);
+    return this.httpCliente.post(`${baserUrl}/usuarios/`, user);
   }
 }
